@@ -1,0 +1,23 @@
+{
+  "name": "badjokecounter",
+  "version": "2.0.0",
+  "description": "Vinesauce Bad Joke Counter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rguzg/badjokecounter.git"
+  },
+  "keywords": [
+    "vinesauce",
+    "badjoke"
+  ],
+  "author": "rguzg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rguzg/badjokecounter/issues"
+  },
+  "homepage": "https://github.com/rguzg/badjokecounter#readme"
+}
