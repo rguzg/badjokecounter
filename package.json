@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/rguzg/badjokecounter/issues"
   },
-  "homepage": "https://github.com/rguzg/badjokecounter#readme"
+  "homepage": "https://github.com/rguzg/badjokecounter#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
