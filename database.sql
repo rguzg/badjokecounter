@@ -11,7 +11,7 @@ CREATE TABLE streamers(
     score int DEFAULT 0,
     bad_jokes int DEFAULT 0,
     good_jokes int DEFAULT 0,
-    morshu int DEFAULT 0
+    morshu int DEFAULT 0,
     subscription_expiration int NOT NULL
 );
 
