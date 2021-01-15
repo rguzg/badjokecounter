@@ -12,7 +12,7 @@ CREATE TABLE streamers(
     bad_jokes int DEFAULT 0,
     good_jokes int DEFAULT 0,
     morshu int DEFAULT 0,
-    subscription_expiration int NOT NULL
+    subscription_expiration bigint UNSIGNED DEFAULT 0
 );
 
 CREATE TABLE score_history(
