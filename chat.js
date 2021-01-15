@@ -1,13 +1,16 @@
 const tmi = require("tmi.js");
 const dotenv = require("dotenv");
+// const EventEmitter = require('events');
 
 dotenv.config();
+
+// const ChatEvent = new events.EventEmitter();
 
 function ReadChat(){
     const client = new tmi.Client({
         identity: {
             username: process.env.TWITCH_USERNAME,
-            password: process.env.TWITCH_OAUTH
+            password: `oauth:${process.env.TWITCH_BEARER_TOKEN}`
           },
           channels: [process.env.TWITCH_CHANNEL]
     });
@@ -17,7 +20,7 @@ function ReadChat(){
     }
 
    function onConnectedHandler (addr, port) {
-        console.log(`Connected to ${addr}:${port}`);
+        console.log(`Connected to chat on ${addr}:${port}`);
    }
 
     client.on('message', onMessageHandler);
