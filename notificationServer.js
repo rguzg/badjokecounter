@@ -42,7 +42,7 @@ class NotificationServer{
                 let queryResult = await db.query(query)
                 let {subscription_expiration} = queryResult[0]
     
-                if(Date.now() > subscription_expiration || subscription_expiration == 0){
+                if(Date.now() > subscription_expiration || subscription_expiration == 0 || process.env.DEBUG){
                     console.log("Subscription has expired, resubscribing...");
                     this.#Subscribe();    
                 }
@@ -54,7 +54,7 @@ class NotificationServer{
         });
     }
 
-    #Subscribe = async () => {
+    #Subscribe() {
         // Subscribe to the twitch "Channel changes status" webhook
         await fetch("https://api.twitch.tv/helix/webhooks/hub", {
             method: "POST",
